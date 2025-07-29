@@ -3,13 +3,17 @@ services:
   portfolio:
     container_name: nextjs-portfolio
     image: nextjs-portfolio
+    build:
+      context: .
+      dockerfile: Dockerfile
     mem_limit: 512m
     networks:
       - frontend
     labels:
       - 'traefik.enable=true'
-      - 'traefik.http.routers.portfolio-http.rule=Host(`localhost:3000`)'
-      - 'traefik.http.routers.portfolio-http.entrypoints=web'
+      - 'traefik.http.routers.portfolio-http.rule=Host(`localhost`)'
+      - 'traefik.http.routers.portfolio-http.entrypoints=nextjs_app'
+      - 'traefik.http.services.portfolio.loadbalancer.server.port=3000' #new entry point label added through loadbalancer
       # - 'traefik.http.routers.portfolio-https.tls=true'
       # - 'traefik.http.routers.portfolio-https.tls.certresolver=cloudfare'
       # - 'traefik.http.routers.portfolio-https.entrypoints=websecure'
