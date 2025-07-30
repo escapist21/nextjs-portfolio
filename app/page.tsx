@@ -25,14 +25,14 @@ export default function Page() {
         </ul>
       </div>
       <div className='flex flex-col w-2/3 text-left h-2/3'>
-        <h1 className="mt-10 text-6xl font-extrabold font-stretch-50% tracking-tight">
+        <h1 className="text-6xl font-extrabold font-stretch-50% tracking-tight">
           Building AI & Data Tools for
         </h1>
         <h1 className="mb-4 text-7xl font-extrabold text-emerald-500">
           Policy Impact
         </h1>
         <p className="mb-4 text-xl">Data Science enthusiast working at the intersection of public policy, systems design and social impact</p>
-        <p className="mb-4">
+        {/* <p className="mb-4">
           {`I’m a full-stack data science engineer working at the intersection of public policy, 
           climate resilience, and social impact. My work spans the design and automation of complex 
           data pipelines, geospatial and mixed-methods analysis, and building AI-enabled systems 
@@ -45,6 +45,9 @@ export default function Page() {
           academic institutions, and social enterprises to translate research into actionable tools, 
           policy briefs, and digital platforms.`}
         </p>
+        <h3 className='text-5xl font-extrabold font-stretch-50% tracking-tight'>Philosophy</h3>
+        <p className='text-2xl'>Build slow, Think wide, Execute with precision.</p>
+        <p>Great systems aren’t just efficient - they’re empathetic. I believe in tools that adapt to people, not the other way around.</p> */}
       </div>
       {/* <h1 className="mb-8 text-2xl font-semibold tracking-wider">
         Sourav's Portfolio
