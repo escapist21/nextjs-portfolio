@@ -52,6 +52,7 @@ export default function RootLayout({
         GeistMono.variable
       )}
     >
+      <head><script src="https://kit.fontawesome.com/e03e4c504c.js" crossOrigin="anonymous"></script></head>
       <body className="antialiased max-w-6xl mx-4 mt-8 lg:mx-auto">
         <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
           <Navbar />
