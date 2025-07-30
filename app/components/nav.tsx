@@ -19,7 +19,7 @@ export function Navbar() {
     <aside className="-ml-[8px] mb-16 tracking-tight">
       <div className="lg:sticky lg:top-20">
         <nav
-          className="flex flex-row items-start relative px-0 pb-0 fade md:overflow-auto scroll-pr-6 md:relative"
+          className="flex flex-row items-start relative px-0 pb-0 fade scroll-pr-6 md:relative"
           id="nav"
         >
           <div className="flex flex-row space-x-0 pr-10">
@@ -31,16 +31,16 @@ export function Navbar() {
                   className="group transition-all 
                   hover:bg-emerald-500 
                   rounded-md 
-                  flex align-middle relative py-1 px-2 m-1"
+                  flex align-middle relative py-2 px-2 m-1 text-xl"
                 >
                   <i className={iconClasses}></i>
                   <span
                     className="
-                      absolute 
-                      bottom-full mb-2 left-1/2 -translate-x-1/2 
-                      whitespace-nowrap 
-                      rounded-md bg-neutral-800 px-2 py-1 text-sm text-white 
-                      opacity-0 scale-95 transition-all 
+                      absolute z-10
+                      top-full mt-2 left-1/2 -translate-x-1/2
+                      whitespace-nowrap
+                      rounded-md bg-neutral-800 px-2 py-1 text-xs text-white
+                      opacity-0 scale-95 transition-all
                       group-hover:opacity-100 group-hover:scale-100
                     "
                   >{name}</span>
