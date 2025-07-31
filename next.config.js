@@ -1,5 +1,6 @@
-// next.config.js
-module.exports = {
-  // ... rest of the configuration.
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   output: "standalone",
 };
+
+module.exports = nextConfig;
