@@ -11,7 +11,7 @@ services:
       - frontend
     labels:
       - 'traefik.enable=true'
-      - 'traefik.http.routers.portfolio-http.rule=Host(`localhost`)'
+      - 'traefik.http.routers.portfolio-http.rule=Host(`sourav.app`)'
       - 'traefik.http.routers.portfolio-http.entrypoints=nextjs_app'
       # - 'traefik.http.services.portfolio.loadbalancer.server.port=3000' #new entry point label added through loadbalancer
       - 'traefik.http.routers.portfolio-https.tls=true'
