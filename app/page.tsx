@@ -19,7 +19,7 @@ export default function Page() {
           <h3 className="mb-4 text-center text-4xl lg:text-5xl font-extrabold font-stretch-condensed tracking-tight">Sourav Adhikari</h3>
           <p className="text-center text-lg lg:text-xl font-stretch-extra-condensed">Data Scientist | Systems Thinker | Researcher</p>
           <p className="text-center text-lg lg:text-xl">New Delhi, India</p>
-          <ul className='flex flex-row mt-6 px-20 md:px-24 justify-evenly'>
+          <ul className='flex flex-row mt-6 justify-center gap-x-6'>
             <li>
               <a className="hover:text-emerald-500" rel="noopener noreferrer" target="_blank" href='https://www.linkedin.com/in/sourav90/'>
                 <i className='fa-brands fa-linkedin-in'></i>
