@@ -53,8 +53,8 @@ export default function RootLayout({
       )}
     >
       <head><script src="https://kit.fontawesome.com/e03e4c504c.js" crossOrigin="anonymous"></script></head>
-      <body className="antialiased max-w-xl md:max-w-3xl lg:max-w-6xl mx-4 mt-8 md:mx-auto">
-        <main className="flex-auto min-w-0 mt-6 flex flex-col px-2 md:px-0">
+      <body className="antialiased">
+        <main className="flex-auto min-w-0 mt-6 flex flex-col md:max-w-4xl lg:max-w-6xl px-10 mx-auto">
           <Navbar />
           {children}
           <Footer />
