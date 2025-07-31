@@ -61,13 +61,13 @@ export default function Page() {
         <h3 className='text-5xl font-extrabold font-stretch-50% tracking-tight'>Philosophy</h3>
         <p className='text-2xl'>Build slow, Think wide, Execute with precision.</p>
         <p>Great systems aren’t just efficient - they’re empathetic. I believe in tools that adapt to people, not the other way around.</p> */}
-      </div>
-      {/* <h1 className="mb-8 text-2xl font-semibold tracking-wider">
-        Sourav's Portfolio
-      </h1> */}
-      {/* <div className="my-8">
+      <div className="my-8">
+        <h1 className="text-4xl lg:text-5xl font-extrabold font-stretch-50% tracking-tight mb-6">
+          Thoughts
+        </h1>
         <BlogPosts />
-      </div> */}
+      </div>
+      </div>
     </section>
   )
 }
