@@ -1,4 +1,6 @@
 import { BlogPosts } from 'app/components/posts'
+import SocialLinks from 'app/components/SocialLinks'
+import socialLinks from 'app/lib/social-links.json'
 import Image from 'next/image'
 
 export default function Page() {
@@ -18,23 +20,7 @@ export default function Page() {
           <h3 className="mb-4 text-center text-4xl lg:text-5xl font-extrabold font-stretch-condensed tracking-tight">Sourav Adhikari</h3>
           <p className="text-center text-md lg:text-md font-stretch-extra-condensed">Data Scientist | Systems Thinker | Researcher</p>
           <p className="text-center text-md lg:text-md">New Delhi, India</p>
-          <ul className='flex flex-row mt-4 justify-center gap-x-6'>
-            <li>
-              <a className="hover:text-emerald-500" rel="noopener noreferrer" target="_blank" href='https://www.linkedin.com/in/sourav90/'>
-                <i className='fa-brands fa-linkedin-in'></i>
-              </a>
-            </li>
-            <li>
-              <a className="hover:text-emerald-500" rel="noopener noreferrer" target="_blank" href='https://github.com/escapist21/'>
-                <i className='fa-brands fa-github'></i>
-              </a>
-            </li>
-            <li>
-              <a className="hover:text-emerald-500" rel="noopener noreferrer" target="_blank" href="mailto:sourav90.adhikari@gmail.com">
-                <i className='fa-solid fa-envelope'></i>
-              </a>
-            </li>
-          </ul>
+          <SocialLinks links={socialLinks} />
         </div>
       </div>
       <div className='flex flex-col w-full lg:w-2/3 text-center lg:text-left justify-center md:justify-start' id="Main Content">
