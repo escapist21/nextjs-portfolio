@@ -11,7 +11,7 @@ export default function Page() {
           <Image
             className='mb-4 rounded-lg object-cover'
             // src="/images/headshot_rect_yellow_shadow.webp"
-            src="https://res.cloudinary.com/dkf3vfz08/image/upload/f_auto,q_auto/v1754075434/picofme_7_gl3c06.png"
+            src="https://res.cloudinary.com/dkf3vfz08/image/upload/f_auto,q_auto,c_fill,w_240,h_280/v1754075434/picofme_7_gl3c06.png"
             alt="A profile image of Sourav Adhikari"
             width={240}
             height={280}
