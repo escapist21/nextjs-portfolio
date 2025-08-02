@@ -10,7 +10,8 @@ export default function Page() {
         <div className="flex justify-center">
           <Image
             className='mb-4 rounded-lg object-cover'
-            src="/images/headshot_rect_yellow_shadow.webp"
+            // src="/images/headshot_rect_yellow_shadow.webp"
+            src="https://res.cloudinary.com/dkf3vfz08/image/upload/v1754075434/picofme_7_gl3c06.png"
             alt="A profile image of Sourav Adhikari"
             width={240}
             height={280}
