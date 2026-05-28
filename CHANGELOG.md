@@ -10,6 +10,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 - Added CLAUDE.md with project documentation covering architecture, components, and development workflows.
 - Added `.claude/agents/` directory with sub-agent definitions for blog pipeline, changelog maintenance, and responsiveness review.
+- Added blog post: "Your Netflix auto-payment is not AI" — on why automated payments and AI agents are not analogous.
 
 ### Changed
 
