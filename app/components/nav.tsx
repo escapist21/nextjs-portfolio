@@ -1,17 +1,17 @@
 import Link from 'next/link'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faHouse, faNewspaper } from '@fortawesome/free-regular-svg-icons'
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core'
 
-const navItems = {
+const navItems: Record<string, { name: string; icon: IconDefinition }> = {
   '/': {
     name: 'Home',
-    iconClasses: 'fa-regular fa-house',
+    icon: faHouse,
   },
   '/blog': {
     name: 'Blog',
-    iconClasses: 'fa-regular fa-newspaper'
+    icon: faNewspaper,
   },
-  // 'https://vercel.com/templates/next.js/portfolio-starter-kit': {
-  //   name: 'deploy',
-  // },
 }
 
 export function Navbar() {
@@ -23,17 +23,17 @@ export function Navbar() {
           id="nav"
         >
           <div className="flex flex-row space-x-0 pr-4 sm:pr-6 md:pr-10">
-            {Object.entries(navItems).map(([path, { name, iconClasses }]) => {
+            {Object.entries(navItems).map(([path, { name, icon }]) => {
               return (
                 <Link
                   key={path}
                   href={path}
-                  className="group transition-all 
-                  hover:bg-emerald-500 
-                  rounded-md 
+                  className="group transition-all
+                  hover:bg-emerald-500
+                  rounded-md
                   flex align-middle relative py-3 px-3 m-1 min-w-[44px] min-h-[44px] text-lg sm:text-xl"
                 >
-                  <i className={iconClasses}></i>
+                  <FontAwesomeIcon icon={icon} className="w-5 h-5" />
                   <span
                     className="
                       absolute z-10

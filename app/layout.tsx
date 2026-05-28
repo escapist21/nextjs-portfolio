@@ -1,4 +1,7 @@
 import './global.css'
+import '@fortawesome/fontawesome-svg-core/styles.css'
+import { config } from '@fortawesome/fontawesome-svg-core'
+config.autoAddCss = false
 import type { Metadata } from 'next'
 import { GeistSans } from 'geist/font/sans'
 import { GeistMono } from 'geist/font/mono'
@@ -52,9 +55,6 @@ export default function RootLayout({
         GeistMono.variable
       )}
     >
-      <head>
-        <script src="https://kit.fontawesome.com/e03e4c504c.js" crossOrigin="anonymous"></script>
-      </head>
       <body className="antialiased">
         <main className="flex-auto min-w-0 mt-6 flex flex-col md:max-w-4xl lg:max-w-6xl px-4 sm:px-6 md:px-8 lg:px-10 mx-auto">
           <Navbar />

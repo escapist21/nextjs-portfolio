@@ -1,15 +1,23 @@
-import React from 'react';
+import React from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faLinkedinIn, faGithub } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons'
+import { IconDefinition } from '@fortawesome/fontawesome-svg-core'
 
-// Define the structure for a single social link
 interface SocialLink {
-  name: string;
-  url: string;
-  icon: string;
+  name: string
+  url: string
+  icon: string
 }
 
-// Define the props for the SocialLinks component
 interface SocialLinksProps {
-  links: SocialLink[];
+  links: SocialLink[]
+}
+
+const iconMap: Record<string, IconDefinition> = {
+  'fa-brands fa-linkedin-in': faLinkedinIn,
+  'fa-brands fa-github': faGithub,
+  'fa-solid fa-envelope': faEnvelope,
 }
 
 const SocialLinks: React.FC<SocialLinksProps> = ({ links }) => {
@@ -23,12 +31,12 @@ const SocialLinks: React.FC<SocialLinksProps> = ({ links }) => {
             target="_blank"
             href={link.url}
           >
-            <i className={link.icon}></i>
+            <FontAwesomeIcon icon={iconMap[link.icon]} className="w-5 h-5" />
           </a>
         </li>
       ))}
     </ul>
-  );
-};
+  )
+}
 
-export default SocialLinks;
+export default SocialLinks
