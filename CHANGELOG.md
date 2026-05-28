@@ -15,7 +15,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Removed
 
 - Removed dummy blog posts: "Static Typing", "Spaces vs Tabs", and "Vim" (placeholder content).
-- Untracked `.claude/` and `context.md` from git via `.gitignore`.
+- Untracked `.claude/`, `context.md`, and `CLAUDE.md` from git via `.gitignore`.
 
 ### Changed
 
