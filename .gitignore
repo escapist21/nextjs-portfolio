@@ -25,6 +25,9 @@
 context.md
 CLAUDE.md
 
+# blog source files
+app/blog/markdown-posts/
+
 # debug
 npm-debug.log*
 yarn-debug.log*
