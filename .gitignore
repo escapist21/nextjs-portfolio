@@ -23,6 +23,7 @@
 # claude
 .claude/
 context.md
+CLAUDE.md
 
 # debug
 npm-debug.log*
