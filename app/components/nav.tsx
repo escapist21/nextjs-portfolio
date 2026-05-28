@@ -33,7 +33,7 @@ export function Navbar() {
                   rounded-md
                   flex align-middle relative py-3 px-3 m-1 min-w-[44px] min-h-[44px] text-lg sm:text-xl"
                 >
-                  <FontAwesomeIcon icon={icon} className="w-5 h-5" />
+                  <FontAwesomeIcon icon={icon} className="w-[1em] h-[1em]" />
                   <span
                     className="
                       absolute z-10
