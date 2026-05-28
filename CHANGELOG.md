@@ -12,6 +12,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 - Added `.claude/agents/` directory with sub-agent definitions for blog pipeline, changelog maintenance, and responsiveness review.
 - Added blog post: "Your Netflix auto-payment is not AI" — on why automated payments and AI agents are not analogous.
 
+### Removed
+
+- Removed dummy blog posts: "Static Typing", "Spaces vs Tabs", and "Vim" (placeholder content).
+
 ### Changed
 
 - Scaled page padding responsively (`px-4` → `lg:px-10`) in `layout.tsx` to improve mobile layout.
