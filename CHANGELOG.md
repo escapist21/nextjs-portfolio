@@ -15,6 +15,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 ### Performance
 
 - Replaced Font Awesome CDN kit with `@fortawesome/react-fontawesome` npm packages — eliminates external network request and ~3.5s post-load script execution; icons are now bundled as inline SVGs, tree-shaken to the 5 icons in use.
+- Load time reduced from 3,612ms → 315ms (91% improvement); FCP improved from 568ms → 128ms (4.4× faster).
 
 ### Removed
 
