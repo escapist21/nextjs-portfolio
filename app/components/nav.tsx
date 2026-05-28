@@ -22,7 +22,7 @@ export function Navbar() {
           className="flex flex-row items-start relative px-0 pb-0 fade scroll-pr-6 md:relative"
           id="nav"
         >
-          <div className="flex flex-row space-x-0 pr-10">
+          <div className="flex flex-row space-x-0 pr-4 sm:pr-6 md:pr-10">
             {Object.entries(navItems).map(([path, { name, iconClasses }]) => {
               return (
                 <Link
@@ -31,7 +31,7 @@ export function Navbar() {
                   className="group transition-all 
                   hover:bg-emerald-500 
                   rounded-md 
-                  flex align-middle relative py-2 px-2 m-1 text-xl"
+                  flex align-middle relative py-3 px-3 m-1 min-w-[44px] min-h-[44px] text-lg sm:text-xl"
                 >
                   <i className={iconClasses}></i>
                   <span
