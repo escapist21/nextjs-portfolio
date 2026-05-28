@@ -20,6 +20,10 @@
 *.pem
 .vscode
 
+# claude
+.claude/
+context.md
+
 # debug
 npm-debug.log*
 yarn-debug.log*
