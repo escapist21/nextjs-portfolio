@@ -1,0 +1,31 @@
+---
+import HouseIcon from './icons/HouseIcon.astro'
+import NewspaperIcon from './icons/NewspaperIcon.astro'
+
+const navItems = [
+  { path: '/', name: 'Home', Icon: HouseIcon },
+  { path: '/blog', name: 'Blog', Icon: NewspaperIcon },
+]
+---
+<aside class="-ml-[8px] mb-16 tracking-tight">
+  <div class="lg:sticky lg:top-20">
+    <nav
+      class="flex flex-row items-start relative px-0 pb-0 fade scroll-pr-6 md:relative"
+      id="nav"
+    >
+      <div class="flex flex-row space-x-0 pr-4 sm:pr-6 md:pr-10">
+        {navItems.map(({ path, name, Icon }) => (
+          <a
+            href={path}
+            class="group transition-all hover:bg-emerald-500 rounded-md flex align-middle relative py-3 px-3 m-1 min-w-[44px] min-h-[44px] text-lg sm:text-xl"
+          >
+            <Icon class="w-[1em] h-[1em]" />
+            <span class="absolute z-10 top-full mt-2 left-1/2 -translate-x-1/2 whitespace-nowrap rounded-md bg-neutral-800 px-2 py-1 text-xs text-white opacity-0 scale-95 transition-all group-hover:opacity-100 group-hover:scale-100">
+              {name}
+            </span>
+          </a>
+        ))}
+      </div>
+    </nav>
+  </div>
+</aside>
