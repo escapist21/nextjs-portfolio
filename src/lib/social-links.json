@@ -1,0 +1,17 @@
+[
+  {
+    "name": "LinkedIn",
+    "url": "https://www.linkedin.com/in/sourav90/",
+    "icon": "fa-brands fa-linkedin-in"
+  },
+  {
+    "name": "GitHub",
+    "url": "https://github.com/escapist21/",
+    "icon": "fa-brands fa-github"
+  },
+  {
+    "name": "Email",
+    "url": "mailto:sourav90.adhikari@gmail.com",
+    "icon": "fa-solid fa-envelope"
+  }
+]
