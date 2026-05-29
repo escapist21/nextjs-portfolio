@@ -1,23 +1,16 @@
 # syntax=docker.io/docker/dockerfile:1
 
 # ── Stage 1: Build ────────────────────────────────────────────────────────────
-FROM node:20-alpine AS builder
+FROM node:22-alpine AS builder
 WORKDIR /app
 
 RUN apk add --no-cache libc6-compat
 
-COPY package.json package-lock.json* pnpm-lock.yaml* ./
-RUN \
-  if [ -f pnpm-lock.yaml ]; then corepack enable pnpm && pnpm install --frozen-lockfile; \
-  elif [ -f package-lock.json ]; then npm ci; \
-  else echo "No lockfile found." && exit 1; \
-  fi
+COPY package.json package-lock.json ./
+RUN npm ci --legacy-peer-deps
 
 COPY . .
-RUN \
-  if [ -f pnpm-lock.yaml ]; then corepack enable pnpm && pnpm build; \
-  else npm run build; \
-  fi
+RUN npm run build
 
 # ── Stage 2: Serve ────────────────────────────────────────────────────────────
 FROM nginx:1.27-alpine AS runner
