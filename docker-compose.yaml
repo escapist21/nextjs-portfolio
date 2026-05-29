@@ -9,26 +9,6 @@ services:
     mem_limit: 128m
     networks:
       - frontend
-    labels:
-      - 'traefik.enable=true'
-      # HTTP router (for traffic from Nginx cache to Traefik's port 80)
-      # This also handles the HTTP-to-HTTPS redirect within Traefik
-      - 'traefik.http.routers.portfolio-http.rule=Host(`sourav.app`) || Host(`www.sourav.app`)'
-      - 'traefik.http.routers.portfolio-http.entrypoints=web'
-      - 'traefik.http.routers.portfolio-http.middlewares=traefik-redirect-to-https'
-
-      # HTTPS router (for traffic from Nginx SSL Passthrough to Traefik's port 443)
-      - 'traefik.http.routers.portfolio-https.rule=Host(`sourav.app`) || Host(`www.sourav.app`)'
-      - 'traefik.http.routers.portfolio-https.entrypoints=websecure'
-      - 'traefik.http.routers.portfolio-https.tls=true'
-      - 'traefik.http.routers.portfolio-https.tls.certresolver=cloudfare'
-
-      # Middleware definition for redirect
-      - 'traefik.http.middlewares.traefik-redirect-to-https.redirectscheme.scheme=https'
-      - 'traefik.http.middlewares.traefik-redirect-to-https.redirectscheme.permanent=true'
-
-      # Nginx listens on port 80 inside the container
-      - 'traefik.http.services.portfolio-https.loadbalancer.server.port=80'
     restart: unless-stopped
 networks:
   frontend:

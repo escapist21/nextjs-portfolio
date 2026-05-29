@@ -1,0 +1,33 @@
+# Caddy reverse proxy — replaces Traefik
+# Place this file on your VPS alongside the caddy docker-compose service.
+#
+# SSL: uses a Cloudflare Origin Certificate (15-year, no ACME challenges).
+# Generate one at: Cloudflare Dashboard → SSL/TLS → Origin Server → Create Certificate
+# Save the cert as /etc/caddy/certs/origin.pem
+# Save the key  as /etc/caddy/certs/origin.key
+
+{
+    # Disable Caddy's automatic HTTPS — Cloudflare origin cert is used instead
+    auto_https off
+}
+
+# ── Portfolio ─────────────────────────────────────────────────────────────────
+
+sourav.app {
+    tls /etc/caddy/certs/origin.pem /etc/caddy/certs/origin.key
+
+    reverse_proxy nextjs-portfolio:80
+}
+
+www.sourav.app {
+    tls /etc/caddy/certs/origin.pem /etc/caddy/certs/origin.key
+
+    redir https://sourav.app{uri} permanent
+}
+
+# ── Add your other services below ─────────────────────────────────────────────
+# Example:
+# other-domain.com {
+#     tls /etc/caddy/certs/origin.pem /etc/caddy/certs/origin.key
+#     reverse_proxy other-container-name:port
+# }
