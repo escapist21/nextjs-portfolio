@@ -13,7 +13,6 @@
 /out/
 
 # astro
-/dist/
 /.astro/
 
 # production
