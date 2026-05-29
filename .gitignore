@@ -48,6 +48,11 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
+Dockerfile
+docker-compose.yaml
+Caddyfile
+nginx.conf
+
 compose.dev.yaml
 compose.prod.yaml
 dev.Dockerfile
