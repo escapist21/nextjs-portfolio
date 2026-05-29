@@ -4,6 +4,21 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
+## [Unreleased] - 2026-05-29
+
+### Migration: Next.js → Astro
+
+- Replaced Next.js 14 canary with Astro v6 — eliminates client-side hydration entirely, fixing persistent production issues (high load times, intermittent link failures, click events not registering).
+- Output is now zero JavaScript (was ~101 kB JS per page); only a 24 KB CSS bundle ships to the browser.
+- Docker image reduced from ~300 MB (Node.js standalone) to ~21 MB (Nginx alpine); memory limit reduced from 512 MB to 128 MB.
+- Replaced `@fortawesome/react-fontawesome` with 5 inline SVG `.astro` components — eliminates the React runtime from production output entirely.
+- Geist font self-hosted from `public/fonts/` (variable woff2); removes the `geist` npm package (Next.js font loader).
+- Blog posts migrated to Astro Content Collections (`src/content/blog/`); MDX files and frontmatter unchanged.
+- OG images pre-generated at build time via `satori` + `@resvg/resvg-js` + `sharp`; no longer generated on-demand by a server route.
+- Added `nginx.conf` with gzip, immutable cache headers for hashed assets, and security headers (`X-Frame-Options`, `X-Content-Type-Options`, `Referrer-Policy`).
+- Traefik routing unchanged except container port updated from 3000 to 80.
+- Removed `@vercel/analytics`, `@vercel/speed-insights`, `next-mdx-remote`, `postcss`, and all `@fortawesome/*` npm packages.
+
 ## [Unreleased] - 2026-05-28
 
 ### Added
