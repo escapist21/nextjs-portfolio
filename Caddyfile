@@ -9,6 +9,10 @@
 {
     # Disable Caddy's automatic HTTPS — Cloudflare origin cert is used instead
     auto_https off
+
+    # Cloudflare origin certs have no public OCSP URL — disable stapling to
+    # suppress the warning and avoid unnecessary lookup attempts
+    ocsp_stapling off
 }
 
 # ── Portfolio ─────────────────────────────────────────────────────────────────
